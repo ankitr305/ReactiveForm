@@ -66,13 +66,12 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class AppComponent {
   userForm = new FormGroup({
-    name: new FormControl('Ankit', [Validators.required,Validators.minLength(4),Validators.maxLength(6)]),
+    name: new FormControl('Ankit', [Validators.required]),
     email: new FormControl("email@email.com",Validators.required),
     address: new FormGroup({
       street: new FormControl("street no.",Validators.required),
       city: new FormControl("city",Validators.required),
       postalCode: new FormControl(null, [
-        Validators.minLength(4),
         Validators.maxLength(6)
       ])
     })
