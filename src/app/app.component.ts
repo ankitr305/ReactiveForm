@@ -16,12 +16,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
         <div *ngIf="userForm.controls['name'].hasError('required')">
           Please enter the name
         </div>
-        <div *ngIf="userForm.controls['name'].hasError('minlength')">
-          Name should be greaater than 4 characters
-        </div>
-        <div *ngIf="userForm.controls['name'].hasError('maxlength')">
-          Name should be less than 6 characters
-        </div>
         <div class="form-group">
           <label>Email</label>
           <input type="text" class="form-control" formControlName="email" />
